@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '076c9449-f0fe-463d-8570-6daed2c27065'
+  azureSubscription: '838a0b05-b309-42f2-9e25-b5c3adce4e08'
 
   # Web app name
-  webAppName: 'mySuperAwesomeApp'
+  webAppName: 'KenyD'
 
   # Environment name
-  environmentName: 'mySuperAwesomeApp'
+  environmentName: 'KenyD'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -62,7 +62,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: mySuperAwesomeApp'
             inputs:
-              azureSubscription: $(azureSubscription)
+              azureSubscription: $(Visual Studio Professional Subscription)
               appType: webAppLinux
-              appName: $(webAppName)
+              appName: $(KenyD)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
